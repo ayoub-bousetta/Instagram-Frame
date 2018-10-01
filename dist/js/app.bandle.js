@@ -1,0 +1,14 @@
+!function(e){var t={};function n(l){if(t[l])return t[l].exports;var s=t[l]={i:l,l:!1,exports:{}};return e[l].call(s.exports,s,s.exports,n),s.l=!0,s.exports}n.m=e,n.c=t,n.d=function(e,t,l){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:l})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var l=Object.create(null);if(n.r(l),Object.defineProperty(l,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var s in e)n.d(l,s,function(t){return e[t]}.bind(null,s));return l},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/dist",n(n.s="./src/js/main.js")}({"./src/css/main.scss":
+/*!***************************!*\
+  !*** ./src/css/main.scss ***!
+  \***************************/
+/*! no static exports found */function(e,t,n){},"./src/js/app.js":
+/*!***********************!*\
+  !*** ./src/js/app.js ***!
+  \***********************/
+/*! no static exports found */function(e,t){let n=document.getElementsByClassName("item"),l=n[0].offsetHeight,s=l*n.length,i=!1;document.getElementById("downscroll").addEventListener("click",e=>{if(wDelta="down",1==i)return!1;let t,r,o;i=!0;for(let e=0;e<n.length;e++)1==(r=n[e]).classList.contains("active")&&(r.classList.add(wDelta),(o=l*(e+1))<s?(t=r.nextElementSibling,r.style.top="-"+o+"px",t.style.top="-"+o+"px",null!=t.nextElementSibling&&(t.nextElementSibling.style.top="-"+o+"px"),e>0&&(n[0].style.top=l+"px")):(t=n[0],r.style.top="-"+o+"px",setTimeout(()=>{r.classList.remove(wDelta)},2e3),r.classList.remove("active"),(t=n[0]).style.top="0px",null!=t.nextElementSibling?t.nextElementSibling.style.top="0px":null!=t.previousElementSibling&&(t.previousElementSibling.style.top="0px")));new Promise(function(e,n){t.classList.add(wDelta,"active"),e()}).then(()=>{setTimeout(()=>{null!=t.previousElementSibling?(t.previousElementSibling.classList.remove("active"),t.previousElementSibling.classList.remove(wDelta)):null!=t.nextElementSibling&&(t.nextElementSibling.classList.remove("active"),t.nextElementSibling.classList.remove(wDelta)),t.classList.remove(wDelta),i=!1},2e3)})},!1)},"./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/*! no exports provided */function(e,t,n){"use strict";n.r(t);n(/*! ../css/main.scss */"./src/css/main.scss"),n(/*! ../js/app.js */"./src/js/app.js")}});
+//# sourceMappingURL=app.bandle.js.map

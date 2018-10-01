@@ -1,0 +1,158 @@
+@mixin ig_block {
+   
+$bgcolor:#fff;
+$iconscolor:#1a2922;
+
+
+    .igblock{
+       // background: $bgcolor;
+       // padding: 0.8rem;
+         position: absolute;z-index:4 ;
+       // border-radius: 0.6rem;
+        height: 522px;
+        width: 377px;    
+
+        .igheader{background: $bgcolor;
+            display: flex;
+            flex-wrap: wrap;  justify-content:  flex-start;
+            align-items: center;
+          padding: 0.8rem 0.8rem;border-top-left-radius: 0.6rem;border-top-right-radius:0.6rem;
+        
+
+            a{
+
+                margin-left: 14px;
+                color: #1a2922;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 1rem;
+
+                &:first-child{
+
+                    background-color: $bgcolor;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    display: block;
+                    flex: 0 0 auto;
+                    overflow: hidden;
+                    position: relative;
+                    width: 40px;
+                    height: 40px;margin-left: 0px;
+    
+                    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                }
+
+               
+
+               
+                   
+                
+              
+                }
+
+                span{
+                    margin-left: auto;font-size: 0.8rem;
+                }
+
+            }
+           
+        }
+
+        .imgbox{
+            height: 320px;background: transparent;
+            overflow: hidden; border-left: 0.6rem solid $bgcolor;border-right: 0.6rem solid $bgcolor;
+
+        }
+
+       .igfooter{
+        background: $bgcolor;
+        padding: 0.8rem 0.8rem;border-bottom-left-radius: 0.6rem;border-bottom-right-radius:0.6rem;
+        position: relative;
+        #downscroll{
+            width: 40px;
+            height: 40px;
+            border: 3px solid #fff;
+            display: block;
+            border-radius: 50%;    
+            position: absolute;
+            background: $yellow;
+            right: -16px;
+            bottom: -16px;
+            cursor: pointer;
+            i{
+                line-height: 35px;
+                  right: 0;
+                  color: #fff;
+            }
+
+            
+        
+        }
+
+        .buttons{   display: flex;
+            flex-wrap: wrap;  justify-content:  flex-start;
+            align-items: center;      
+                    span{display: block;
+
+                    
+
+                    
+                        i{
+                            font-size: 1.6rem;
+                            width: 35px;
+                            text-align: left;color: $iconscolor;
+                        }
+
+                        &.likes{
+                            i{
+                                color: $pink
+                            }
+                        }
+
+                        &:last-child{
+                    
+                                margin-left: auto; i{
+                                    text-align: right;
+                                }
+                        
+                        }
+                    }
+
+             }
+
+             .caption{
+                 span{
+                     color: $iconscolor;
+                     font-size: 0.8rem;
+                    padding: 10px 0;
+                     text-align: left;
+                     display: block;
+                 }
+                 .text{font-size: 0.8rem;text-align: left;
+                     a{
+                        margin-right: .3em;
+                        color: $iconscolor;
+                        font-weight: 600;
+                        text-decoration: none;
+                       
+                        display: inline-block;
+                     }
+                     p{display: inline-block;
+                        margin: 0;
+                     }
+                 }
+
+             }
+        }
+
+    
+    }
+
+
+
+  
