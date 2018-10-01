@@ -168,12 +168,16 @@ html {
       height: 100vh; }
       body header #images .item,
       html header #images .item {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         display: block;
         position: relative;
         top: 0px;
-        bottom: 0px; }
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
         body header #images .item.down,
         html header #images .item.down {
           transition: all 2s ease 0s;
@@ -184,23 +188,57 @@ html {
           bottom: 0px; }
         body header #images .item img,
         html header #images .item img {
+          max-width: 100%;
+          max-height: 100%;
           width: 100%;
           height: 100%; }
-        body header #images .item .content,
-        html header #images .item .content {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 100vh;
-          flex-direction: column; }
-          body header #images .item .content p,
-          html header #images .item .content p {
-            text-transform: uppercase;
-            margin: 0 auto;
-            font-weight: bold; }
-          body header #images .item .content span,
-          html header #images .item .content span {
-            font-size: 0.8rem; }
+          @media screen and (max-width: 992px) {
+            body header #images .item img,
+            html header #images .item img {
+              min-width: 1200px;
+              height: 100vh;
+              max-width: 100vw; } }
+        body header #images .item .content p,
+        html header #images .item .content p {
+          text-transform: uppercase;
+          margin: 0 auto;
+          font-weight: bold; }
+        body header #images .item .content span,
+        html header #images .item .content span {
+          font-size: 0.8rem; }
+    body header .descp,
+    html header .descp {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      z-index: 1;
+      color: #000;
+      background: white;
+      padding: 0.8rem 0.8rem;
+      border-top-left-radius: 0.6rem;
+      border-top-right-radius: 0.6rem; }
+      @media screen and (max-width: 992px) {
+        body header .descp,
+        html header .descp {
+          display: none; } }
+      body header .descp p,
+      html header .descp p {
+        text-transform: normal;
+        margin: 0 auto;
+        font-size: 0.8rem;
+        color: #000;
+        display: block; }
+      body header .descp span, body header .descp a,
+      html header .descp span,
+      html header .descp a {
+        font-size: 0.8rem;
+        display: block;
+        text-decoration: none;
+        color: #000; }
+      body header .descp a,
+      html header .descp a {
+        border: 1px solid #000;
+        margin-top: 12px; }
 
 @keyframes hidetop {}@keyframes hideup {
   100% {
